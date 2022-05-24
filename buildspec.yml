@@ -52,14 +52,14 @@
 #     - .aws-sam/packaged-app.yml
 #   discard-paths: yes
 
-version: 0.1
-phases:
-  install:
-    commands:
-      - mvn package
-      - sam package --template-file template.yaml --s3-bucket aws-sam-cli --output-template-file packaged-template.yaml
-    - template.yml
-  discard-paths: yes
+# version: 0.1
+# phases:
+#   install:
+#     commands:
+#       - mvn package
+#       - sam package --template-file template.yaml --s3-bucket aws-sam-cli --output-template-file packaged-template.yaml
+#     - template.yml
+#   discard-paths: yes
 
 # version: 0.2
 # phases:
@@ -75,5 +75,17 @@ phases:
 #     - .aws-sam/build/template.yaml
 #   discard-paths: yes
 
-
+#hello-world
+version: 0.1
+phases:
+  install:
+    commands:
+      - mvn clean package
+      - aws cloudformation package --template-file template.yaml --s3-bucket codepipeline-ap-south-1-182844376226
+                                   --output-template-file outputSamTemplate.yaml
+artifacts:
+  type: zip
+  files:
+    - template.yaml
+    - outputSamTemplate.yaml
 
