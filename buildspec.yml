@@ -74,7 +74,7 @@ phases:
     - make package
 artifacts:
   files:
-    - .aws-sam/template.yaml
+    - .aws-sam/build/template.yaml
   discard-paths: yes
 
 
