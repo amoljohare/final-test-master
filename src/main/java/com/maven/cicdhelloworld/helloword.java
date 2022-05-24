@@ -8,7 +8,7 @@ public class helloword implements RequestHandler<Object, String> {
 
 	@Override
 	public String handleRequest(Object input, com.amazonaws.services.lambda.runtime.Context context) {
-		System.out.println("hello word");
+		System.out.println("hello world");
 		return "hello word..";
 	
 	}
