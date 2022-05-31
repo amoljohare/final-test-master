@@ -26,6 +26,18 @@ Resources:
                     Properties:
                         Path: /hello
                         Method: get
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: sam-app-2
+    Description: hello world
+    Author: user1
+    SpdxLicenseId: Apache-2.0
+    LicenseUrl: LICENSE.txt
+    ReadmeUrl: README.md
+    Labels: ['tests']
+    HomePageUrl: https://github.com/amoljohare/final-test-master.git
+    SemanticVersion: 0.0.1
+    SourceCodeUrl: https://github.com/amoljohare/final-test-master.git
 
 Outputs:
 
