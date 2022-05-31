@@ -47,7 +47,7 @@ Metadata:
     Description: twitterpoller2
     Author: user1
     SpdxLicenseId: Apache-2.0
-    LicenseUrl: LICENSE.txt
+    LicenseUrl: LICENSE-2.0.txt
     ReadmeUrl: README.md
     Labels: ['tests']
     HomePageUrl: https://github.com/thebenjy/astes1.git
