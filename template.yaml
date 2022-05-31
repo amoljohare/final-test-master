@@ -17,9 +17,9 @@ Resources:
             CodeUri: . 
             Handler: com.maven.cicdhelloworld.helloword::handleRequest
             Runtime: java8
-#            Environment: 
-#                Variables:
-#                    PARAM1: VALUE
+           Environment: 
+               Variables:
+                   PARAM1: VALUE
             Events:
                 HelloWorld:
                     Type: Api 
