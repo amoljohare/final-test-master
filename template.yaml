@@ -1,3 +1,58 @@
+# AWSTemplateFormatVersion: '2010-09-09'
+# Transform: AWS::Serverless-2016-10-31
+# Description: >
+#     sam-app
+#     Sample SAM Template for sam-app
+
+# Globals:
+#     Function:
+#         Timeout: 20
+
+
+# Resources:
+
+#     HelloWorldFunction:
+#         Type: AWS::Serverless::Function 
+#         Properties:
+#             CodeUri: .
+#             Handler: com.maven.cicdhelloworld.helloword::handleRequest
+#             Runtime: java8
+# #            Environment:
+# #                Variables:
+# #                    PARAM1: VALUE
+#             Events:
+#                 HelloWorld:
+#                     Type: Api 
+#                     Properties:
+#                         Path: /hello
+#                         Method: get
+
+# Outputs:
+
+#     HelloWorldApi:
+#       Description: "API Gateway endpoint URL for Prod stage for Hello World function"
+#       Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+
+# #    HelloWorldFunction:
+# #      Description: "Hello World Lambda Function ARN"
+# #      Value: !GetAtt HelloWorldFunction.Arn
+# #
+# #    HelloWorldFunctionIamRole:
+# #      Description: "Implicit IAM Role created for Hello World function"
+# #      Value: !GetAtt HelloWorldFunctionRole.Arn
+
+# Metadata:
+#   AWS::ServerlessRepo::Application:
+#     Name: my-app
+#     Description: twitterpoller2
+#     Author: user1
+#     SpdxLicenseId: Apache-2.0
+#     LicenseUrl: LICENSE-2.0.txt
+#     ReadmeUrl: README.md
+#     Labels: ['tests']
+#     HomePageUrl: https://github.com/thebenjy/astes1.git
+#     SemanticVersion: 0.0.1
+#     SourceCodeUrl: https://github.com/thebenjy/astes1.git
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
@@ -53,3 +108,4 @@ Metadata:
     HomePageUrl: https://github.com/thebenjy/astes1.git
     SemanticVersion: 0.0.1
     SourceCodeUrl: https://github.com/thebenjy/astes1.git
+
