@@ -1,44 +1,66 @@
---- 
-AWSTemplateFormatVersion: "2010-09-09"
-Description: "sam-app Sample SAM Template for sam-app\n"
-Globals: 
-  Function: 
-    Timeout: 20
-Metadata: 
-  ? "AWS::ServerlessRepo::Application"
-  : 
-    Author: user1
-    Description: "hello world"
-    HomePageUrl: "https://github.com/amoljohare/final-test-master.git"
-    Labels: 
-      - tests
-    LicenseUrl: LICENSE.txt
-    Name: sam-app-2
-    ReadmeUrl: README.md
-    SemanticVersion: "0.0.1"
-    SourceCodeUrl: "https://github.com/amoljohare/final-test-master.git"
-    SpdxLicenseId: Apache-2.0
-Outputs: 
-  HelloWorldApi: 
-    Description: "API Gateway endpoint URL for Prod stage for Hello World function"
-    Value: "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
-  HelloWorldFunction: 
-    Description: "Hello World Lambda Function ARN"
-    Value: HelloWorldFunction.Arn
-  HelloWorldFunctionIamRole: 
-    Description: "Implicit IAM Role created for Hello World function"
-    Value: HelloWorldFunctionRole.Arn
-Resources: 
-  HelloWorldFunction: 
-    Properties: 
-      CodeUri: "."
-      Events: 
-        HelloWorld: 
-          Properties: 
-            Method: get
-            Path: /hello
-          Type: Api
-      Handler: "com.maven.cicdhelloworld.helloword::handleRequest"
-      Runtime: java8
-    Type: "AWS::Serverless::Function"
-Transform: "AWS::Serverless-2016-10-31"
+APP_COR07
+
+Acc@1234
+
+
+
+Citrix Gateway (hdfclife.com)
+
+172.27.71.103
+
+Acchdfc@123
+
+172.27.71.103
+172.27.73.227
+
+
+
+
+    Access Key ID:
+    AKIA2QALEIOWTDZM7P6G
+    Secret Access Key:
+    jVTmL0PBR68GtAlMJajF+8lWrcH3rlsZyTGTn8GK
+
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+    sam-app
+    Sample SAM Template for sam-app
+
+Globals:
+    Function:
+        Timeout: 20
+
+
+Resources:
+
+    HelloWorldFunction:
+        Type: AWS::Serverless::Function
+        Properties:
+            CodeUri: . 
+            Handler: com.maven.cicdhelloworld.helloword::handleRequest
+            Runtime: java8
+#            Environment: 
+#                Variables:
+#                    PARAM1: VALUE
+            Events:
+                HelloWorld:
+                    Type: Api 
+                    Properties:
+                        Path: /hello
+                        Method: get
+
+
+Outputs:
+
+    HelloWorldApi:
+      Description: "API Gateway endpoint URL for Prod stage for Hello World function"
+      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+
+    HelloWorldFunction:
+      Description: "Hello World Lambda Function ARN"
+      Value: !GetAtt HelloWorldFunction.Arn
+
+    HelloWorldFunctionIamRole:
+      Description: "Implicit IAM Role created for Hello World function"
+      Value: !GetAtt HelloWorldFunctionRole.Arn
