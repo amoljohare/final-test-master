@@ -40,3 +40,16 @@ Outputs:
 #    HelloWorldFunctionIamRole:
 #      Description: "Implicit IAM Role created for Hello World function"
 #      Value: !GetAtt HelloWorldFunctionRole.Arn
+
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: my-app
+    Description: twitterpoller2
+    Author: user1
+    SpdxLicenseId: Apache-2.0
+    LicenseUrl: LICENSE.txt
+    ReadmeUrl: README.md
+    Labels: ['tests']
+    HomePageUrl: https://github.com/thebenjy/astes1.git
+    SemanticVersion: 0.0.1
+    SourceCodeUrl: https://github.com/thebenjy/astes1.git
